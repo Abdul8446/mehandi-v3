@@ -1,17 +1,20 @@
-// app/api/orders/[id]/ship/route.ts
+// app/api/orders/[id]/deliver/route.ts
 import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import Order from '@/models/Order';
+import { use } from 'react';
 
-export async function PATCH(
-  request: NextRequest, 
+
+export async function PUT(
+  request: Request,
   { params }: { params: Promise<{ orderId: string }> }
 ) {
   await dbConnect();
 
   try {
-    const { orderId } = await params;
+    // const { orderId } = use(params);
     const { status } = await request.json();
+    const { orderId } = await params;
 
     const updateData: any = { status };
     
@@ -42,22 +45,4 @@ export async function PATCH(
   }
 }
 
-// import type { NextRequest } from "next/server"
 
-// export async function PATCH(request: NextRequest, { params }: { params: Promise<{ orderId: string }> }) {
-//   // Await the params Promise
-//   const { orderId } = await params
-
-//   try {
-//     // Your delivery logic here
-//     console.log(`Delivering order: ${orderId}`)
-
-//     // Example response
-//     return Response.json({
-//       success: true,
-//       message: `Order ${orderId} marked as delivered`,
-//     })
-//   } catch (error) {
-//     return Response.json({ error: "Failed to deliver order" }, { status: 500 })
-//   }
-// }

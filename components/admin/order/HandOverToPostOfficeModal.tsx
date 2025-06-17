@@ -33,7 +33,7 @@ export default function HandOverToPostOfficeModal({ order, isOpen, onClose, refr
       setError('');
       
       // Update order status via API
-      await axios.patch(`/api/orders/${order.orderId}/ship`, {
+      await axios.put(`/api/orders/${order.orderId}/ship`, {
         trackingNumber: trackingId,
         status: 'Shipped'
       });

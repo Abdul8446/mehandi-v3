@@ -3,17 +3,18 @@ import { NextResponse } from 'next/server';
 import dbConnect from '@/lib/mongoose';
 import Order from '@/models/Order';
 
-export async function PATCH(
+export async function PUT(
   request: Request,
-  { params }: { params: { orderId: string } }
+  { params }: { params: Promise<{ orderId: string }> }
 ) {
   await dbConnect();
 
   try {
     const { trackingNumber } = await request.json();
+    const { orderId } = await params;
     
     const updatedOrder = await Order.findOneAndUpdate(
-      {orderId:params.orderId},
+      {orderId:orderId},
       {
         status: 'Shipped',
         trackingId: trackingNumber,

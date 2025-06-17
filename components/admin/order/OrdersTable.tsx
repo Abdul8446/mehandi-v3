@@ -35,7 +35,7 @@ export default function OrdersTable({
 
   const handleMarkAsDelivered = async (orderId: string) => {
     try {
-      await axios.patch(`/api/orders/${orderId}/deliver`, {
+      await axios.put(`/api/orders/${orderId}/deliver`, {
         status: 'Delivered'
       });
       toast.success('Order marked as delivered');
