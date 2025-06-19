@@ -111,7 +111,7 @@ const Header3 = () => {
                   {/* <img src="/images/logo.png" alt="" /> */}
                 {/* </div> */}
                 <div 
-                className="w-10 h-10  rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-120"
+                className="w-10 h-10  rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-120 group-active:scale-120"
                 style={{
                     backgroundImage: "url('/images/logo.png')",
                     backgroundSize: 'cover',
@@ -124,7 +124,7 @@ const Header3 = () => {
 
                 {/* <div className="absolute -inset-1 bg-gradient-to-br from-brown-900 to-brown-700 rounded-xl opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div> */}
               </div>
-              <div className="hidden sm:block">
+              <div className="">
                 <span className="text-xl font-bold bg-gradient-to-r from-brown-900 to-brown-700 bg-clip-text text-transparent">
                   Mehandi Mansion
                 </span>

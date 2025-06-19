@@ -166,7 +166,7 @@ const ProductDetailPage = () => {
                   ))}
                 </div>
                 <span className="ml-2 text-sm text-gray-600">
-                  {product.rating.toFixed(1)} ({product.reviewsCount} reviews)
+                  {product.rating && product.rating.toFixed(1)} ({product?.reviewsCount} reviews)
                 </span>
               </div>
               
@@ -300,7 +300,7 @@ const ProductDetailPage = () => {
                 className={`px-6 py-3 text-sm font-medium ${activeTab === 'reviews' ? 'border-b-2 border-red-900 text-red-900' : 'text-gray-600 hover:text-red-900'}`}
                 onClick={() => setActiveTab('reviews')}
               >
-                Reviews ({product.reviewsCount})
+                Reviews ({product?.reviewsCount})
               </button>
             </div>
             
@@ -350,8 +350,8 @@ const ProductDetailPage = () => {
                           />
                         ))}
                       </div>
-                      <span className="text-2xl font-bold">{product.rating.toFixed(1)}</span>
-                      <span className="text-gray-600 ml-2">based on {product.reviewsCount} reviews</span>
+                      <span className="text-2xl font-bold">{product.rating && product.rating.toFixed(1)}</span>
+                      <span className="text-gray-600 ml-2">based on {product?.reviewsCount} reviews</span>
                     </div>
                     <Link href="#write-review" className="btn-primary inline-block">Write a Review</Link>
                   </div>
