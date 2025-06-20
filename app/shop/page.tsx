@@ -20,33 +20,52 @@ const Shop = () => {
   // Initialize loading to true *only* if products are empty
   const [loading, setLoading] = useState(products.length === 0);
 
-  useEffect(() => {
-    if (products.length === 0) {
-      // If no products, fetch them
-      const fetchProducts = async () => {
-        try {
-          const res = await fetch('/api/products');
-          const data = await res.json();
-          setProducts(data);
-        } catch (error) {
-          console.error('Failed to fetch products:', error);
-        } finally {
-          setLoading(false);
-        }
-      };
-      fetchProducts();
-    } else {
-      // If products already loaded, no need to load
-      setLoading(false);
-    }
-  }, []);
+
+    useEffect(() => {
+      if (products.length === 0) {
+        // If no products, fetch them
+        const fetchProducts = async () => {
+          try {
+            const res = await fetch('/api/products');
+            const data = await res.json();
+            setProducts(data);
+          } catch (error) {
+            console.error('Failed to fetch products:', error);
+          } finally {
+            setLoading(false);
+          }
+        };
+        fetchProducts();
+      } else {
+        // If products already loaded, no need to load
+        setLoading(false);
+      }
+    }, []);    
+
+  console.log(products, 'products in shop page');
 
  
   const filteredProducts = products.filter(product => {
+    if (product.status !== 'Active') return false;
     if (selectedCategory && product.category !== selectedCategory) return false;
     if (product.price < priceRange[0] || product.price > priceRange[1]) return false;
     return true;
   });
+
+  console.log(filteredProducts, 'filteredProducts');
+
+  const testFilter = () => {
+    return products.filter(product => {
+      console.log('Checking product:', product.name, {
+        statusActive: product.status === 'active',
+        categoryMatch: !selectedCategory || product.category === selectedCategory,
+        priceMatch: product.price >= priceRange[0] && product.price <= priceRange[1]
+      });
+      return (!selectedCategory || product.category === selectedCategory) && 
+            (product.price >= priceRange[0] && product.price <= priceRange[1]);
+    });
+  };
+  console.log('Test filter results:', testFilter());
 
   const sortedProducts = [...filteredProducts].sort((a, b) => {
     switch (sortBy) {
@@ -60,6 +79,8 @@ const Shop = () => {
         return (b.isFeatured ? 1 : 0) - (a.isFeatured ? 1 : 0);
     }
   });
+
+  console.log(sortedProducts, 'sortedProducts');
 
   const categories = [...new Set(products.map(product => product.category))];
 

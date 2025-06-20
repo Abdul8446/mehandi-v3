@@ -7,7 +7,7 @@ import { Types } from 'mongoose';
 
 export async function GET() {
   await dbConnect()
-  const products = await Product.find().lean()
+  // const products = await Product.find().lean()
   // console.log(products)
   // return NextResponse.json(products)
   try {

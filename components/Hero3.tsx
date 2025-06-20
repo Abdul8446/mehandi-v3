@@ -231,7 +231,7 @@ const Hero3 = () => {
             </Link>
 
             <Link
-              href="/book-artist"
+              href="/booking"
               className="group bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full font-semibold text-base sm:text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 active:scale-95 flex items-center space-x-2"
             >
               <Calendar size={20} />

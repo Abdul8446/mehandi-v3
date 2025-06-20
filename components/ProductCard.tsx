@@ -59,7 +59,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             Featured
           </span>
         )}
-        {product.originalPrice && (
+        {product.discount>0 && (
           <span className="bg-red-600 text-white text-xs font-bold px-2 py-1 rounded">
             Sale
           </span>
@@ -144,7 +144,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
         {/* Price and Add to Cart */}
         <div className="flex items-center justify-between mt-auto px-4 pb-4">
           <div>
-            {product.originalPrice ? (
+            {product?.discount>0 ? (
               <div className="flex items-center">
                 <span className="text-lg font-bold text-amber-700">
                   ₹{product.price}

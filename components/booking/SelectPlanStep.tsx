@@ -38,6 +38,7 @@ const SelectPlanStep: React.FC<SelectPlanStepProps> = ({ plans, onPlanSelect, lo
 
           <div className="flex justify-between items-center mb-6">
             <div className="flex items-center gap-1">
+              <span className='italic'>Starting from</span> 
               <span className="text-lg font-semibold text-red-900">
                 {plan.price===0?'Custom':'₹'+plan.price}
               </span>

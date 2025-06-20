@@ -11,32 +11,60 @@ interface Category {
   description: string;
 }
 
-const categories: Category[] = [
-  {
-    id: 'henna-powders',
-    name: 'Henna Powders',
-    image: 'https://images.pexels.com/photos/7069063/pexels-photo-7069063.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    description: 'Premium quality natural henna powders from different regions'
-  },
-  {
-    id: 'ready-cones',
-    name: 'Ready-to-use Cones',
-    image: 'https://images.pexels.com/photos/8472869/pexels-photo-8472869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    description: 'Pre-mixed cones for perfect application every time'
-  },
-  {
-    id: 'gift-kits',
-    name: 'Gift Kits',
-    image: 'https://images.pexels.com/photos/6692132/pexels-photo-6692132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    description: 'Curated collections for gifting and special occasions'
-  },
-  {
-    id: 'accessories',
-    name: 'Accessories',
-    image: 'https://images.pexels.com/photos/6690924/pexels-photo-6690924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-    description: 'Everything you need for perfect henna application'
-  }
-];
+// const categories: Category[] = [
+//   {
+//     id: 'henna-powders',
+//     name: 'Henna Powders',
+//     image: 'https://m.media-amazon.com/images/I/51IbikEMEpL._AC_UF350,350_QL80_.jpg',
+//     description: 'Premium quality natural henna powders from different regions'
+//   },
+//   {
+//     id: 'ready-cones',
+//     name: 'Ready-to-use Cones',
+//     image: 'https://images.pexels.com/photos/8472869/pexels-photo-8472869.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     description: 'Pre-mixed cones for perfect application every time'
+//   },
+//   {
+//     id: 'gift-kits',
+//     name: 'Gift Kits',
+//     image: 'https://images.pexels.com/photos/6692132/pexels-photo-6692132.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     description: 'Curated collections for gifting and special occasions'
+//   },
+//   {
+//     id: 'accessories',
+//     name: 'Accessories',
+//     image: 'https://images.pexels.com/photos/6690924/pexels-photo-6690924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+//     description: 'Everything you need for perfect henna application'
+//   }
+// ];
+
+  const categories: Category[] = [
+    {
+      id: 'henna-powders',
+      name: 'Henna Powders',
+      image: 'https://m.media-amazon.com/images/I/51IbikEMEpL._AC_UF350,350_QL80_.jpg',
+      description: 'Premium quality natural henna powders from different regions'
+    },
+    {
+      id: 'ready-cones',
+      name: 'Ready-to-use Cones',
+      image: 'https://i.pinimg.com/736x/3f/20/23/3f202389a43470f64dfa81cb34bb9531.jpg',
+      description: 'Pre-mixed cones for perfect application every time'
+    },
+    {
+      id: 'bridal-essentials',
+      name: 'Bridal Essentials',
+      image: 'https://img3.exportersindia.com/product_images/bc-small/2019/2/6133967/whatsapp-image-2018-07-02-at-4-05-19-pm-1--1549299281.jpeg',
+      description: 'Everything you need for bridal mehndi — from cones to after-care'
+    },
+    {
+      id: 'stencils-practice',
+      name: 'Stencils & Practice',
+      image: 'https://lifeline-foundation.org/wp-content/uploads/2024/11/DSC_2826-scaled.jpg',
+      description: 'Stencils, books, and tools to improve your mehndi skills'
+    }
+  ];
+
 
 const CategorySection = () => {
   return (

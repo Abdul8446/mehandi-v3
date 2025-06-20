@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import ProductCard from './ProductCard';
 import { IProduct } from '@/models/Product';
 import Link from 'next/link';
@@ -8,11 +8,29 @@ import { useProducts } from '@/contexts/ProductContext';
 
 
 const FeaturedProducts = () => {
-  const { products } = useProducts();
+  const { products, setProducts } = useProducts();
+
+  useEffect(() => {
+      // If no products, fetch them
+      const fetchProducts = async () => {
+        try {
+          const res = await fetch('/api/products');
+          const data = await res.json();
+          setProducts(data);
+        } catch (error) {
+          console.error('Failed to fetch products:', error);
+        } 
+      };
+      fetchProducts();
+  
+  }, []);    
+  
   
   const featuredProducts = products
       .filter(product => product.isFeatured)
       .slice(0, 4); // show only 4
+
+  console.log(products, 'featuredProducts');    
 
   return (
     <section className="py-12 bg-amber-50">
