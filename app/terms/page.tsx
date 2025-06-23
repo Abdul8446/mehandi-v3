@@ -187,7 +187,7 @@ const Terms = () => {
                 <section className="mb-12">
                   <h2 className="text-2xl font-serif text-brown-900 mb-4">8. Governing Law</h2>
                   <p className="text-gray-700">
-                    These terms are governed by and construed in accordance with the laws of India, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+                    These terms are governed by and construed in accordance with the laws of India.
                   </p>
                 </section>
 
