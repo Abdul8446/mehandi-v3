@@ -29,7 +29,7 @@ const About = () => {
               </div>
               <div className="relative">
                 <Image
-                  src="https://images.pexels.com/photos/6684762/pexels-photo-6684762.jpeg"
+                  src="https://images.pexels.com/photos/2486420/pexels-photo-2486420.jpeg"
                   alt="Mehandi artist at work"
                   width={800}
                   height={600}

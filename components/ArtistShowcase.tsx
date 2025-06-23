@@ -13,7 +13,7 @@ const ArtistShowcase = () => {
           {/* Image Side */}
           <div className="relative">
             <Image
-              src="https://images.pexels.com/photos/6684762/pexels-photo-6684762.jpeg"
+              src="https://images.pexels.com/photos/1081997/pexels-photo-1081997.jpeg"
               alt="Mehandi Artist at work"
               width={1260}
               height={750}

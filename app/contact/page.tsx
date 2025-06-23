@@ -122,21 +122,21 @@ const Contact = () => {
                       <MapPin className="w-6 h-6 text-brown-700 mr-4 mt-1" />
                       <div>
                         <h3 className="font-medium text-gray-900">Address</h3>
-                        <p className="text-gray-600">123 Mehandi Street, Artisan District, Mumbai, 400001</p>
+                        <p className="text-gray-600">Punnakkabazar, Mathilakam, Thrissur, 680685</p>
                       </div>
                     </div>
-                    <div className="flex items-start">
+                    {/* <div className="flex items-start">
                       <Phone className="w-6 h-6 text-brown-700 mr-4 mt-1" />
                       <div>
                         <h3 className="font-medium text-gray-900">Phone</h3>
                         <p className="text-gray-600">+91 98765 43210</p>
                       </div>
-                    </div>
+                    </div> */}
                     <div className="flex items-start">
                       <Mail className="w-6 h-6 text-brown-700 mr-4 mt-1" />
                       <div>
                         <h3 className="font-medium text-gray-900">Email</h3>
-                        <p className="text-gray-600">info@mehandimansion.com</p>
+                        <p className="text-gray-600">mehandimansion@gmail.com</p>
                       </div>
                     </div>
                     <div className="flex items-start">
@@ -153,12 +153,23 @@ const Contact = () => {
                   <div className="mt-8 p-6 bg-brown-50 rounded-lg">
                     <h3 className="font-medium text-gray-900 mb-2">Store Location</h3>
                     <div className="aspect-video rounded-lg overflow-hidden relative">
-                      <Image
+                      {/* <Image
                         src="https://images.pexels.com/photos/5669602/pexels-photo-5669602.jpeg"
                         alt="Store location"
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
+                      /> */}
+                      <iframe
+                        src="https://www.google.com/maps?q=10.3005619,76.1535231&z=18&output=embed"
+                        title="Store Location Map"
+                        width="100%"
+                        height="100%"
+                        style={{ border: 0, position: 'absolute', top: 0, left: 0 }}
+                        allowFullScreen
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        className="w-full h-full"
                       />
                     </div>
                   </div>
