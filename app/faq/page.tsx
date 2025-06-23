@@ -28,11 +28,11 @@ const FAQ = () => {
     },
     {
       question: 'What is your return policy?',
-      answer: 'We accept returns within 7 days of delivery for unopened products in their original packaging. Custom orders and used products cannot be returned.'
+      answer: 'You can request a return within 2 days of delivery for unused, unopened products in original packaging. For details on the process, conditions, and refunds, please visit our Shipping & Returns page.'
     },
     {
       question: 'Do you ship internationally?',
-      answer: 'Yes, we ship to select international locations. Shipping costs and delivery times vary by destination. Check our shipping page for detailed information.'
+      answer: 'No, we currently do not offer international shipping. Orders can only be delivered within India.'
     }
   ];
 

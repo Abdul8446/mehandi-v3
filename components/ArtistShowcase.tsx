@@ -3,6 +3,7 @@
 import React from 'react';
 import Button from './ui/Button';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ArtistShowcase = () => {
   return (
@@ -56,7 +57,9 @@ const ArtistShowcase = () => {
             </ul>
             
             <Button variant="secondary" size="lg">
+              <Link href="/booking">
               Book an Appointment
+              </Link>
             </Button>
           </div>
         </div>

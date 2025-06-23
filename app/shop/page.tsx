@@ -7,6 +7,7 @@ import ProductCard from '../../components/ProductCard';
 import { Filter, SlidersHorizontal } from 'lucide-react';
 import { useProducts } from '@/contexts/ProductContext';
 import ShopSkeleton from '@/components/skeleton/ShopSkeleton';
+import { useSearchParams } from 'next/navigation';
 
 
 const Shop = () => {
@@ -14,11 +15,26 @@ const Shop = () => {
   const { products, setProducts } = useProducts();
   // const [loading, setLoading] = useState(true);
   const [showFilters, setShowFilters] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  // const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 10000]);
   const [sortBy, setSortBy] = useState<string>('featured');
   // Initialize loading to true *only* if products are empty
   const [loading, setLoading] = useState(products.length === 0);
+  const searchParams = useSearchParams();
+  const rawCategoryParam = searchParams.get('category');
+  const categoryParam = rawCategoryParam ? decodeURIComponent(rawCategoryParam) : null;
+
+
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(categoryParam || null);
+
+  useEffect(() => {
+    if (categoryParam && categoryParam !== selectedCategory) {
+      setSelectedCategory(categoryParam);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [categoryParam]);
+  
+  
 
 
     useEffect(() => {
@@ -54,6 +70,8 @@ const Shop = () => {
 
   console.log(filteredProducts, 'filteredProducts');
 
+  console.log(selectedCategory, 'selectedCategory in shop page');
+
   const testFilter = () => {
     return products.filter(product => {
       console.log('Checking product:', product.name, {
@@ -82,7 +100,10 @@ const Shop = () => {
 
   console.log(sortedProducts, 'sortedProducts');
 
-  const categories = [...new Set(products.map(product => product.category))];
+  // const categories = [...new Set(products.map(product => product.status === 'Active'?product.category:null))];
+  const categories = [...new Set(products.filter(product => product.status === 'Active').map(product => product.category))];
+
+  console.log(categories, 'categories');
 
   return (
     <>

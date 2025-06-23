@@ -7,7 +7,17 @@ module.exports = {
       // Include any other folders you use with Tailwind classes
     ],
     theme: {
-      extend: {},
+      extend: {
+        animation: {
+          loader: 'loader 1.5s ease-in-out infinite',
+        },
+        keyframes: {
+          loader: {
+            '0%': { transform: 'translateX(-100%)' },
+            '100%': { transform: 'translateX(300%)' },
+          },
+        },
+      },
     },
     plugins: [],
   };

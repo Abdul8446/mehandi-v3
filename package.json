@@ -24,6 +24,7 @@
     "react-feather": "^2.0.10",
     "react-hot-toast": "^2.5.2",
     "react-loading-skeleton": "^3.5.0",
+    "react-responsive": "^10.0.1",
     "twilio": "^5.7.0"
   },
   "devDependencies": {

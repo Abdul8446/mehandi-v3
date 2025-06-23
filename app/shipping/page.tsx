@@ -152,7 +152,7 @@ const Shipping = () => {
                         </li>
                         <li className="flex items-start">
                           <span className="mr-2">3.</span>
-                          <span>Once approved: <strong>Refund processed in 3-5 business days</strong></span>
+                          <span>Once approved: <strong>Refund will be credited in 3-5 business days</strong></span>
                         </li>
                       </ol>
                     </div>
@@ -177,6 +177,14 @@ const Shipping = () => {
                               <li>• Normal product discoloration</li>
                             </ul>
                           </span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2">•</span>
+                          <span>Return can be accepted within 2 days</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="mr-2">•</span>
+                          <span>Refunds are provided only for damaged products</span>
                         </li>
                       </ul>
                     </div>

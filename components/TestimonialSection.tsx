@@ -16,7 +16,7 @@ const testimonials: Testimonial[] = [
     id: 1,
     name: 'Priya Sharma',
     role: 'Bride',
-    image: 'https://images.pexels.com/photos/3727444/pexels-photo-3727444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+    image: 'https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&fit=crop&w=400&q=80',
     quote: 'The bridal mehandi service was exceptional! The artist was punctual, professional, and created the most beautiful design for my wedding. The product quality ensured my mehandi lasted well beyond the wedding festivities.'
   },
   {
