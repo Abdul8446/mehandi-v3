@@ -162,7 +162,7 @@ const Terms = () => {
                 <section className="mb-12">
                   <h2 className="text-2xl font-serif text-brown-900 mb-4">5. Returns & Refunds</h2>
                   <ul className="list-disc pl-6 text-gray-700 space-y-2">
-                    <li>Due to the perishable nature of henna products, we do not accept returns unless the product is damaged or defective.</li>
+                    <li>Due to the nature of henna products, we do not accept returns unless the product is damaged or defective.</li>
                     <li>For damaged products, please contact us within 48 hours of delivery with photos of the damaged items.</li>
                   </ul>
                 </section>
