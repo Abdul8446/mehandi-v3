@@ -27,7 +27,7 @@ const FeaturedProducts = () => {
   
   
   const featuredProducts = products
-      .filter(product => product.isFeatured)
+      .filter(product => product.isFeatured && product.status === 'Active')
       .slice(0, 4); // show only 4
 
   console.log(products, 'featuredProducts');    
